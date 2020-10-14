@@ -20,11 +20,12 @@ class DAO extends Connexion{
                             $req.=$columns[$i].")";
                          }
                     }
+              
                     $values=array_values($data);
                     $req.=" values ( ";
                     for($i=0;$i<count($values);$i++){
                         if($i!==count($values)-1){
-                           $req.="'".$values[$i]."' , "; 
+                           $req.="'".$values[$i]."' , ";  
                         }else{
                            $req.="'".$values[$i]."')";
                         }
